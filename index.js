@@ -6,7 +6,7 @@ require('dotenv').config()
 app.use(express.json());
 app.use(morgan('dev'));
 
-router.use(async (req, res, next) => {
+app.use(async (req, res, next) => {
     const prefix = 'Bearer ';
     const auth = req.header('Authorization');
     
